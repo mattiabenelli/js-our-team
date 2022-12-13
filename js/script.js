@@ -30,8 +30,14 @@ let team = [
         img: "barbara-ramos-graphic-designer.jpg",
     }
 ]
+
+let container = document.getElementById('container')
+
 for (let i = 0; i < team.length; i++){
     for(let key in team[i]){
         console.log(team[i][key])
+        const push = document.createElement('div')
+        push.innerText = team[i][key]
+        container.appendChild(push)
     }   
 }
